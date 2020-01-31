@@ -1,10 +1,8 @@
 $(function(){
     $(".change-eaten").on("click", function (event) {
         event.preventDefault(); 
-        console.log("Clicked update burger"); 
         const burgerId= $(this).data("id"); 
         const neweaten = $(this).data("neweaten"); 
-        console.log(neweaten); 
         const newEatenState = {
             eaten: neweaten
         }; 
@@ -22,7 +20,6 @@ $(function(){
 
     $(".newBurger").on("click", function(event){
         event.preventDefault(); 
-        console.log("Clicked new burger"); 
         const newBurger= $("#newBurger").val().trim(); 
         const newBurgerObj = {newBurger: newBurger}; 
         $.ajax ("/api/burgers", {
@@ -31,6 +28,18 @@ $(function(){
         }).then(
             function(){
                 console.log(`added ${newBurger} to the database`); 
+                location.reload(); 
+            }
+        )
+    }); 
+
+    $(".delete-burger").on("click", function(event){
+        const burgerId = $(this).data("id"); 
+        $.ajax("/api/burgers/"+burgerId, {
+            type: "DELETE"
+        }).then(
+            function(){
+                console.log(`deleted burger id: ${burgerId} from the database`); 
                 location.reload(); 
             }
         )

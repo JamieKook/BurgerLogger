@@ -11,6 +11,11 @@ const burger = {
 
     addNewBurger: async function(newBurgerName){
         return orm.addNewValue("burgers", "name", newBurgerName); 
+    },
+
+    deleteBurger: async function(burgerId){
+        await orm.deleteTableRow("burgers", "id", burgerId); 
+        return true; 
     }
 }
 

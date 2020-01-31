@@ -16,8 +16,8 @@ const orm = {
     updateValue: async function(table, updateColumn, updatedValue, condition, conditionValue){
         try {
             const queryString = `UPDATE ${table} 
-            SET ${updateColumn} = ${updatedValue} 
-            WHERE ${condition} = ${conditionValue}`; 
+                                SET ${updateColumn} = ${updatedValue} 
+                                WHERE ${condition} = ${conditionValue}`; 
             const {results} = await db.query({
                 sql: queryString,
             }); 
@@ -30,12 +30,25 @@ const orm = {
     addNewValue: async function(table, columnName, columnValue){
         try{
             const queryString= `INSERT INTO ${table} (${columnName})
-            VALUES ("${columnValue}")`; 
+                                VALUES ("${columnValue}")`; 
             const {results} = await db.query({
                 sql: queryString,
             }); 
             return results; 
         } catch (err) {
+            console.log(err); 
+        }
+    },
+
+    deleteTableRow: async function (table, condition, conditionValue){
+        try{
+            const queryString = `DELETE FROM ${table}
+                                WHERE ${condition} = ${conditionValue}`; 
+            const {results} = db.query({
+                sql: queryString,
+            });
+            console.log(results); 
+        } catch(err) {
             console.log(err); 
         }
     }
