@@ -1,0 +1,13 @@
+body {
+    background-image: url("../images/burger.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.jumbotron{
+    background-color: #f1efe0; 
+}
+
+.row {
+    background-color: rgba(241,239,224,0.75); 
+}

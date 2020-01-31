@@ -1,0 +1,25 @@
+{
+  "name": "burgerlogger",
+  "version": "1.0.0",
+  "description": "Log burger creation and consumption",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamieKook/BurgerLogger.git"
+  },
+  "author": "Jamie Kook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamieKook/BurgerLogger/issues"
+  },
+  "homepage": "https://github.com/JamieKook/BurgerLogger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql-promisify": "^1.0.1"
+  }
+}
