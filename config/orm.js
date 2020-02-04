@@ -47,7 +47,6 @@ const orm = {
             const {results} = db.query({
                 sql: queryString,
             });
-            console.log(results); 
         } catch(err) {
             console.log(err); 
         }

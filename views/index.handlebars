@@ -7,7 +7,7 @@
                         {{#unless eaten}}
                            <li class="m-5">
                                 {{name}}
-                                <button class="mx-5 change-eaten" data-id="{{id}}" data-neweaten= "1">
+                                <button class="mx-3 change-eaten" data-id="{{id}}" data-neweaten= "1">
                                     Devour it
                                 </button>
                             </li>
@@ -23,14 +23,13 @@
                         {{#if eaten}}
                             <li class="m-5">
                                 {{name}}
-                                <button class = "mx-5 delete-burger" data-id="{{id}}">
+                                <button class = "mx-3 delete-burger" data-id="{{id}}">
                                     Delete
                                 </button>
                             </li>
                         {{/if}}
                     {{/each}}
                 </ol>
-                <button class="delete-all">Clear All Consumed Burgers</button>
             </div>
         </div>
         <div class="row justify-content-center p-4 m-4"> 
