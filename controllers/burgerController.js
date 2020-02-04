@@ -21,7 +21,8 @@ router.put("/api/burgers/:id", async function(req, res){
 
 router.post("/api/burgers", async function(req, res){
    const newBurgerName= req.body.newBurger; 
-   const results = await burger.addNewBurger(newBurgerName); 
+   const results = await burger.addNewBurger(newBurgerName);
+   console.log(results);  
     // if (results.affectedRows !== 0){
         res.status(200).end(); 
     // }
