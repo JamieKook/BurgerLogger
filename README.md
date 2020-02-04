@@ -35,7 +35,7 @@ Users can remove burgers from both the database and the "Consumed Burgers" colum
 
 ## Coding
 
-This project utilizes javascript, node, mySQL, the MVC framework, and various node packages: 
+This project utilizes javascript html, css, bootstraps, node, mySQL, the MVC framework, and various node packages: 
 
 1.   Express is used to stand up the server. 
   
@@ -56,3 +56,5 @@ Github Repo:
 [https://github.com/JamieKook/BurgerLogger](https://github.com/JamieKook/BurgerLogger)
 
 Deployed App: 
+
+[https://gentle-cliffs-24688.herokuapp.com/](https://gentle-cliffs-24688.herokuapp.com/)
