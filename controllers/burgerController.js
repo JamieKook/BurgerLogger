@@ -9,7 +9,6 @@ router.get("/", async function(req, res){
 }); 
 
 router.put("/api/burgers/:id", async function(req, res){
-    console.log("routed to put"); 
     const id= req.params.id; 
     const eatenStatus= req.body.eaten; 
     const results = await burger.changeToEaten(eatenStatus, id); 
@@ -23,9 +22,9 @@ router.put("/api/burgers/:id", async function(req, res){
 router.post("/api/burgers", async function(req, res){
    const newBurgerName= req.body.newBurger; 
    const results = await burger.addNewBurger(newBurgerName); 
-    if (results.affectedRows !== 0){
+    // if (results.affectedRows !== 0){
         res.status(200).end(); 
-    }
+    // }
 }); 
 
 router.delete("/api/burgers/:id", async function(req, res){
