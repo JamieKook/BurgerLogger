@@ -1,18 +1,16 @@
-// const {MySQL} = require("mysql-promisify"); 
-// let db; 
-// if (process.env.JAWSDB_URL){
-//      db = new MySQL(
-//      process.env.JAWSDB_URL
-//     )
-// } else {
-//      db= new MySQL({
-//         host: "localhost", 
-//         port: 3306,
-//         user: "jamie",
-//         password: "1234pass",
-//         database: "burger_logger_db"
-//     }); 
-// }
+const mysql = require("mysql"); 
+let connection; 
 
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL); 
+} else {
+    connection= mysql.createConnection({
+        host: "localhost",
+        user: "jamie",
+        password: "1234pass",
+        database: "burger_logger_db"
+    }); 
+}; 
 
-// module.exports = db; 
+connection.connect(); 
+module.exports = connection; 

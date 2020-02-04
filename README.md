@@ -45,7 +45,7 @@ This project utilizes javascript html, css, bootstraps, node, mySQL, the MVC fra
 
 4.   The burger model, burger.js, calls the orm to interact with the mySQL database. 
 
-5.  Mysql-promisify is used to set up a connection to and manage the database. 
+5.  Mysql is used to set up a connection to and manage the database. 
 
 
 ## Meta 
