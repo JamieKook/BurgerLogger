@@ -4,7 +4,7 @@
   "description": "Log burger creation and consumption",
   "main": "server.js",
   "scripts": {
-    "test": ,
+    "test": "",
     "start": "node server.js"
   },
   "repository": {
