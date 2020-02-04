@@ -1,5 +1,5 @@
 const {MySQL} = require("mysql-promisify"); 
-let db = null; 
+let db; 
 if (process.env.JAWSDB_URL){
      db = new MySQL(
      process.env.JAWSDB_URL
